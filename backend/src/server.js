@@ -3,10 +3,12 @@ import dotenv from "dotenv";
 import ratelimiter from "./middleware/ratelimiter.js";
 import transactionRoutes from "./routes/transactionRoutes.js";
 import { sql } from "./config/db.js";
+import job from "./config/cron.js";
 
 dotenv.config();
 
 const app = express();
+if (process.env.NODE_ENV === "production") job.start();
 app.use(ratelimiter);
 app.use(express.json());
 

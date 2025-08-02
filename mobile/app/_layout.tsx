@@ -1,5 +1,5 @@
 import { Slot } from "expo-router";
-import SafeScreen from "@/components/safeScreen";
+import SafeScreen from "@/components/SafeScreen";
 import { ClerkProvider } from "@clerk/clerk-expo";
 import { tokenCache } from "@clerk/clerk-expo/token-cache";
 import { StatusBar } from "expo-status-bar";
